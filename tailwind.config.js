@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Silkscreen', 'serif'], 
+      },
+        backgroundImage: {
+          'hero-pattern': "url('/assets/header-image-wbg.png')",
+          'footer-texture': "url('/img/footer-texture.png')",
+        }
+    },
   },
   plugins: [],
 }
