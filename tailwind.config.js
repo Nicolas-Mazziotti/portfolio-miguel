@@ -12,7 +12,10 @@ export default {
         backgroundImage: {
           'hero-pattern': "url('/assets/header-image-wbg.png')",
           'footer-texture': "url('/img/footer-texture.png')",
-        }
+        },
+        colors: {
+          secondary: '#6805F1',
+        },
     },
   },
   plugins: [],

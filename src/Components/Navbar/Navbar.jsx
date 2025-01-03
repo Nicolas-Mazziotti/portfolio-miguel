@@ -11,7 +11,7 @@ const Navbar = () => {
       };
     const {t} = useTranslation()
   return (
-    <div className='flex justify-between'>
+    <div className='flex justify-between p-5 bg-black'>
         <LanguageButtons/>
 
         <div className="md:hidden z-10">

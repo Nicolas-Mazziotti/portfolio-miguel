@@ -1,0 +1,31 @@
+html, body {
+    overflow-x: hidden;  /* Previene el desbordamiento horizontal */
+  }
+.logos {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .logos-slide {
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    animation: scroll 30s linear infinite;
+    margin: 0;
+    padding: 0;
+  }
+  .logos-slide .skill {
+    flex-shrink: 0; /* Evita que los elementos se reduzcan de tamaño */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
