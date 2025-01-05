@@ -13,6 +13,26 @@ const Skills = () => {
     autoplaySpeed: 0, // Sin pausas
     cssEase: "linear", // Movimiento lineal continuo
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablets y pantallas más pequeñas
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // Móviles en orientación horizontal
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // Móviles en orientación vertical
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   const images = [
@@ -25,7 +45,7 @@ const Skills = () => {
 
   return (
     <div className="bg-white p-5 py-24 sm:py-32">
-       <h2 className='text-start text-6xl font-bold'>SKILLS</h2>
+      <h2 className="text-start text-4xl sm:text-6xl font-bold">SKILLS</h2>
       <div className="mt-10">
         <Slider {...settings}>
           {images.map((image, index) => (
