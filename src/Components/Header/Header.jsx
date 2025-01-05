@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SocialNetworks from '../SocialNetworks/SocialNetworks'
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
+import { ArrowDownTrayIcon } from '@heroicons/react/16/solid'
 import './Header.css'
 
 const Header = () => {
@@ -41,8 +42,13 @@ const Header = () => {
                 </div>
                 <div className='text-start mt-6 md:w-1/3 md:text-justify md:pl-[100px]'>
                     <h2>Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad. <br></br>Apasionado por la protección de datos y la creación de sistemas seguros</h2>
-                    <div className='text-start md:text-end'>
-                        <button className='rounded-3xl bg-lime-500 w-32 p-2 text-black mt-6'>Descargar CV</button>
+                    <div className="text-start md:text-end">
+                        <a href='public/assets/docs/CV-Miguel-Mazziotti.pdf' 
+                        download='CV-Miguel-Mazziotti.pdf'
+                        className="flex items-center rounded-3xl bg-lime-500 p-3 text-black mt-6 space-x-2 hover:bg-white w-[160px]">
+                            <span>Descargar CV</span>
+                            <ArrowDownTrayIcon className="h-5 w-5" />
+                        </a>
                     </div>
 
                 </div>
