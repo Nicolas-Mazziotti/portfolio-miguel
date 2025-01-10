@@ -1,66 +1,93 @@
 import React from "react";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
-  const settings = {
-    infinite: true,
-    speed: 5000, // Movimiento continuo
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0, // Sin pausas
-    cssEase: "linear", // Movimiento lineal continuo
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024, // Tablets y pantallas más pequeñas
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768, // Móviles en orientación horizontal
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480, // Móviles en orientación vertical
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
-  };
+    const settings = {
+        infinite: true,
+        speed: 6000, // Movimiento continuo
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0, // Sin pausas
+        cssEase: "linear", // Movimiento lineal continuo
+        arrows: false,
+        draggable: false,
+        swipe: false,
+        responsive: [
+            {
+                breakpoint: 1024, // Tablets y pantallas más pequeñas
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 768, // Móviles en orientación horizontal
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 480, // Móviles en orientación vertical
+                settings: {
+                    slidesToShow: 1,
+                    speed: 4000,
+                },
+            },
+        ],
+    };
 
-  const images = [
-    "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg",
-    "https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg",
-    "https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg",
-    "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg",
-    "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-  ];
+    const items = [
+        {
+            image: "./assets/icon-html.png",
+            text: "HTML5",
+        },
+        {
+            image: "./assets/icon-css.png",
+            text: "CSS3",
+        },
+        {
+            image: "./assets/icon-python.png",
+            text: "Python",
+        },
+        {
+            image: "./assets/icon-php.png",
+            text: "PHP",
+        },
+        {
+            image: "./assets/icon-javascript.png",
+            text: "JavaScript",
+        },
+    ];
 
-  return (
-    <div className="bg-white p-5 py-24 sm:py-32">
-      <h2 className="text-start text-4xl sm:text-6xl font-bold">SKILLS</h2>
-      <div className="mt-10">
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className="flex justify-center">
-              <img
-                src={image}
-                alt={`Logo ${index + 1}`}
-                className="max-h-12 w-auto object-contain"
-              />
+    return (
+        <div className="bg-white p-5 py-24 sm:py-32">
+            <motion.h2 className="text-start text-4xl sm:text-6xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }} 
+            >SKILLS</motion.h2>
+            <div className="mt-10">
+                <Slider {...settings}>
+                    {items.map((item, index) => (
+                        <div key={index} className="px-6 text-center"> {/* Separación entre slides */}
+                            <div className="gap-5 border p-3 rounded-lg shadow-sm flex flex-row justify-center items-center text-center space-y-2 rounded-r-[50px] rounded-l-[50px]">
+                                <img
+                                    src={item.image}
+                                    alt={item.text}
+                                    className="w-[25%] max-h-18 object-contain"
+                                />
+                                <span className="text-sm font-medium">{item.text}</span>
+                            </div>                            
+                        </div>
+                    ))}
+                </Slider>
             </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default Skills;

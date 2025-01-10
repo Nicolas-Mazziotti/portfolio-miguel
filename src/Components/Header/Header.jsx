@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SocialNetworks from '../SocialNetworks/SocialNetworks'
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
 import { ArrowDownTrayIcon } from '@heroicons/react/16/solid'
+import { motion } from 'framer-motion'
 import './Header.css'
 
 const Header = () => {
@@ -18,38 +19,63 @@ const Header = () => {
         };
     }, []);
     return (
-        <div className="p-5 h-[70vh] md:h-[75vh]">
+        <div className="p-5 h-[70vh] md:h-[75vh] ">
             <div className='mt-5'>
-                <h1 className='font-sans text-white text-4xl md:text-7xl'>MIGUEL MAZZIOTTI</h1>
+                <motion.h1 className='font-sans text-white text-5xl md:text-7xl text-start md:text-center'
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }}  
+                transition={{ delay: 0.5, duration: 0.5 }}
+                >MIGUEL MAZZIOTTI</motion.h1>
             </div>
             <div className="mt-1 flex sm:mt-1  flex-col-reverse md:flex-row justify-between text-white md:mt-[calc(100vh-500px)]">
                 <div>
                     <div className='flex mt-8'>
                         <ul className='text-white w-full gap-8'>
-                            <li className='flex'>
+                            <motion.li className='flex'
+                                //  className="flex items-center gap-2"
+                                initial={{ opacity: 0, x: -50 }} 
+                                animate={{ opacity: 1, x: 0 }} 
+                                transition={{ duration: 1, ease: "easeOut", delay: 0.8 }} 
+                            >
                                 <ChevronDoubleRightIcon className='text-lime-500 w-10' />
                                 <span className='text-2xl md:text-4xl'>Ciberseguridad</span>
-                            </li>
-                            <li className='flex'>
+                            </motion.li>
+                            <motion.li className='flex'
+                                initial={{ opacity: 0, x: -50 }} 
+                                animate={{ opacity: 1, x: 0 }} 
+                                transition={{ duration: 1, ease: "easeOut", delay: 1 }} 
+                            >
                                 <ChevronDoubleRightIcon className='text-lime-500 w-10' />
                                 <span className='text-2xl md:text-4xl'>Python</span>
-                            </li>
+                            </motion.li>
                         </ul>
                     </div>
-                    <div className='flex gap-3 mt-11'>
-                        <SocialNetworks />
-                    </div>
+                    <motion.div className='flex gap-3 mt-11'
+                     initial={{ opacity: 0, y: 50 }} 
+                     animate={{ opacity: 1, y: 0 }} 
+                     transition={{ duration: 1, ease: "easeOut", delay: 1 }} 
+                    >
+                        <SocialNetworks/>
+                    </motion.div>
                 </div>
-                <div className='text-start mt-6 md:w-1/3 md:text-justify md:pl-[100px]'>
-                    <h2>Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad. <br></br>Apasionado por la protección de datos y la creación de sistemas seguros</h2>
-                    <div className="text-start md:text-end">
-                        <a href='assets/docs/CV-Miguel-Mazziotti.pdf' 
-                        download='CV-Miguel-Mazziotti.pdf'
-                        className="flex items-center rounded-3xl bg-lime-500 p-3 text-black mt-6 space-x-2 hover:bg-white w-[160px]">
+                <div className='text-start mt-6 text-lg md:w-1/3 md:text-justify md:pl-[100px]  overflow-x-hidden overflow-y-hidden'>
+                    <motion.h2
+                     initial={{ opacity: 0, x: 50 }} 
+                     animate={{ opacity: 1, x: 0 }} 
+                     transition={{ duration: 1, ease: "easeOut", delay: 1 }} 
+                    >Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad.</motion.h2>
+                    <motion.div className="text-start md:text-end"
+                    initial={{ opacity: 0, y: 100 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    transition={{ duration: 1, ease: "easeOut", delay: 1 }} 
+                    >
+                        <a href='assets/docs/CV-Miguel-Mazziotti.pdf'
+                            download='CV-Miguel-Mazziotti.pdf'
+                            className="flex items-center rounded-3xl bg-lime-500 p-3 pl-5 text-black mt-6 space-x-2 hover:bg-white w-[180px]">
                             <span>Descargar CV</span>
                             <ArrowDownTrayIcon className="h-5 w-5" />
                         </a>
-                    </div>
+                    </motion.div>
 
                 </div>
                 {/* Primer div con background */}
