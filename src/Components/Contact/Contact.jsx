@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
   return (
-    <div className="bg-[#6805F1] p-4  h-[90vh] md:h-[90vh] flex justify-center items-center w-[100%] bg-[url('/assets/contact-image-background.png')] bg-cover bg-no-repeat bg-center  md:bg-[length:700px_620px]">
+    <div className="bg-black p-4  h-[90vh] md:h-[90vh] flex justify-center items-center w-[100%] bg-[url('/assets/contact-image-background.png')] bg-cover bg-no-repeat bg-center  md:bg-[length:700px_620px]">
       <div className="flex flex-col h-[80vh] p-5 md:pt-36 md:pb-36 md:flex-row justify-around items-center w-full border rounded bg-[url('/assets/contact-chat-background.png')]  bg-no-repeat bg-center bg-[length:300px_220px]"> {/* Centra el contenido y ajusta el ancho */}
         <motion.div className="text-center md:text-start mb-6 md:mb-0"
          initial={{ opacity: 0, y: 50 }}

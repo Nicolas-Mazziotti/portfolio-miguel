@@ -24,7 +24,7 @@ const Header = () => {
                 <motion.h1 className='font-sans text-white text-5xl md:text-7xl text-start md:text-center'
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }}  
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: 1, duration: 0.8 }}
                 >MIGUEL MAZZIOTTI</motion.h1>
             </div>
             <div className="mt-1 flex sm:mt-1  flex-col-reverse md:flex-row justify-between text-white md:mt-[calc(100vh-500px)]">
