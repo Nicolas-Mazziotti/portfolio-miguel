@@ -1,10 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Skills = () => {
+    const {t} = useTranslation()
     const settings = {
         infinite: true,
         speed: 6000, // Movimiento continuo
@@ -32,7 +34,7 @@ const Skills = () => {
             {
                 breakpoint: 480, // Móviles en orientación vertical
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     speed: 4000,
                 },
             },
@@ -69,7 +71,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.5 }} 
-            >SKILLS</motion.h2>
+            >{t("skills.title")}</motion.h2>
             <div className="mt-10">
                 <Slider {...settings}>
                     {items.map((item, index) => (

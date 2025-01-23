@@ -2,8 +2,10 @@ import React from 'react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDownTrayIcon } from '@heroicons/react/16/solid'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const {t} = useTranslation()
   const [showModal, setShowModal] = useState(false);
   return (
     <div
@@ -13,21 +15,19 @@ const About = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.5 }} // Se anima una sola vez cuando el div está al 50% en pantalla 
-      >SOBRE MI</motion.h2>
+      >{t("about.title")}</motion.h2>
       <motion.p className='mt-10 text-lg text-start w-[90%]'
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.5 }} // Se anima una sola vez cuando el div está al 50% en pantalla 
-      >Soy un estudiante enfocado en el desarrollo de software y la ciberseguridad. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad Argentina de la Empresa y he realizado cursos especializados en JavaScript, React y Ciberseguridad. También completé un programa de Ethical Hacking en la Universidad Tecnológica Nacional.
-
-        Apasionado por la tecnología y el análisis de datos, busco aplicar y ampliar mis conocimientos en programación y tecnologías innovadoras. Mi objetivo es crecer profesionalmente participando en proyectos desafiantes, contribuyendo a equipos dinámicos y desarrollándome en entornos que fomenten la creatividad, la innovación y el aprendizaje continuo.
+      >{t("about.resume")}
         </motion.p>
         <button
         onClick={() => setShowModal(true)}
         className="flex items-center rounded-3xl bg-lime-400 p-3 pl-5 text-black mt-6 space-x-2 hover:bg-[#93F203] w-[180px]"
       >
-        <span>Certificado</span>
+        <span>{t("about.button")}</span>
         <ArrowDownTrayIcon className="h-5 w-5" />
       </button>
       {showModal && (
@@ -42,7 +42,7 @@ const About = () => {
               onClick={() => setShowModal(false)}
               className="mt-4 bg-lime-400 text-black p-2 rounded-md hover:bg-[#93F203]"
             >
-              Cerrar
+              {t("about.modal")}
             </button>
           </div>
         </div>

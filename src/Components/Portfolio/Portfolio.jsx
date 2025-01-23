@@ -1,8 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRightCircleIcon } from '@heroicons/react/16/solid'
+import { useTranslation } from 'react-i18next'
 
 const Portfolio = () => {
+  const {t} = useTranslation()
   return (
     <>
       <div className='bg-white p-5 pt-12 '>
@@ -26,11 +28,11 @@ const Portfolio = () => {
         </div>
           <div className='relative flex flex-col gap-2 text-start ml-16 md:mt-10'>
             <p className='text-lime-400'>Python</p>
-            <h3 className='text-white text-2xl'>Detección de rostros</h3>
+            <h3 className='text-white text-2xl'>{t("portfolio.title.proyect1")}</h3>
             <div className="relative text-start md:text-end">
                         <a href='https://github.com/Miguel-Mazziotti/deteccion-rostros/tree/main' 
                         className="flex items-center rounded-3xl bg-transparent  text-white mt-6 space-x-2 w-[180px]">
-                            <span>Ver proyecto</span>
+                            <span>{t("portfolio.button.proyect1")}</span>
                             <ArrowRightCircleIcon className="h-5 w-5 text-lime-400 hover:text-white" />
                         </a>
                     </div>

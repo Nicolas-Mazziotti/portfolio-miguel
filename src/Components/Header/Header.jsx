@@ -41,7 +41,7 @@ const Header = () => {
                                 transition={{ duration: 1, ease: "easeOut", delay: 0.8 }} 
                             >
                                 <ChevronDoubleRightIcon className='text-lime-500 w-10' />
-                                <span className='text-2xl md:text-4xl'>Ciberseguridad</span>
+                                <span className='text-2xl md:text-4xl'>{t("header.list")}</span>
                             </motion.li>
                             <motion.li className='flex'
                                 initial={{ opacity: 0, x: -50 }} 
@@ -75,7 +75,7 @@ const Header = () => {
                         <a href='assets/docs/CV-Miguel-Mazziotti.pdf'
                             download='CV-Miguel-Mazziotti.pdf'
                             className="flex items-center rounded-3xl bg-lime-500 p-3 pl-5 text-black mt-6 space-x-2 hover:bg-white w-[180px]">
-                            <span>Descargar CV</span>
+                            <span>{t('header.buttom')}</span>
                             <ArrowDownTrayIcon className="h-5 w-5" />
                         </a>
                     </motion.div>
@@ -92,7 +92,7 @@ const Header = () => {
 
 
                 {/* Segundo div con background */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -z-[2] bg-[url('/assets/header-image-background.png')] bg-cover bg-no-repeat bg-center opacity-[0.8] w-[400px] sm:w-[500px] h-[400px] md:w-[900px] md:h-[700px]"
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -z-[2] bg-[url('/assets/header-image-background.png')] bg-cover bg-no-repeat bg-center opacity-[0.8] w-[500px] h-[400px] md:w-[900px] md:h-[700px]"
                     style={{
                         transform: `translate3d(-50%, ${scrollY * 0.7}px, 0)`,
                         willChange: 'transform',

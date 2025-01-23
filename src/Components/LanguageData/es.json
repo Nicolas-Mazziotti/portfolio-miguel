@@ -4,6 +4,26 @@
     "navbar.skills" : "HABILIDADES",
     "navbar.portfolio" : "PORTFOLIO",
     "navbar.contact" : "CONTACTO",
-    "header.subtitle": "Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad."
+    "header.subtitle": "Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad.",
+    "header.list": "Ciberseguridad",
+     "header.buttom": "Descargar CV",
+     "about-title": "SOBRE MI",
+    "about.resume": "Soy un estudiante enfocado en el desarrollo de software y la ciberseguridad. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad Argentina de la Empresa y he realizado cursos especializados en JavaScript, React y Ciberseguridad. También completé un programa de Ethical Hacking en la Universidad Tecnológica Nacional. Apasionado por la tecnología y el análisis de datos, busco aplicar y ampliar mis conocimientos en programación y tecnologías innovadoras. Mi objetivo es crecer profesionalmente participando en proyectos desafiantes, contribuyendo a equipos dinámicos y desarrollándome en entornos que fomenten la creatividad, la innovación y el aprendizaje continuo.",
+    "about.button" : "Certificado",
+    "about.modal" : "Cerrar",
+    "skills.title" : "HABILIDADES",
+    "portfolio.title" : "PORTFOLIO",
+    "portfolio.title.proyect1": "Detección de rostros",
+    "portfolio.button.proyect1": "Ver proyecto",
+    "contact.title": "Buscando trabajar",
+    "contact.title2": "juntos?",
+    "contact.subtitle": "Estoy listo para colaborar en proyectos desafiantes. No dudes en contactarme",
+    "contact.available": "DISPONIBLE PARA TRABAJAR",
+    "contact.form.name": "Nombre",
+    "contact.placeholder.name": "Ingresá tu nombre",
+    "contact.placeholder.email" : "Ingresá tu email",
+    "contact.form.message": "Mensaje",
+    "contact.placeholder.message": "Escribe un mensaje",
+    "contact.button": "ENVIAR"
     
 }
