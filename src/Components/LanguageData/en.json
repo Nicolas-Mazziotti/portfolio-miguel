@@ -2,5 +2,7 @@
     "navbar.home": "HOME",
     "navbar.about": "ABOUT",
    "navbar.skills" : "SKILLS",
-   "navbar.contact" : "CONTACTO"
+   "navbar.portfolio" : "PORTFOLIO",
+   "navbar.contact" : "CONTACTO",
+   "header.subtitle": "Software Development student and currently training in Cybersecurity."
 }

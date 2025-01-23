@@ -2,5 +2,8 @@
      "navbar.home": "INICIO",
      "navbar.about": "SOBRE MI",
     "navbar.skills" : "HABILIDADES",
-    "navbar.contact" : "CONTACTO"
+    "navbar.portfolio" : "PORTFOLIO",
+    "navbar.contact" : "CONTACTO",
+    "header.subtitle": "Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad."
+    
 }

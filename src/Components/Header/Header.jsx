@@ -3,14 +3,17 @@ import SocialNetworks from '../SocialNetworks/SocialNetworks'
 import { ChevronDoubleRightIcon } from '@heroicons/react/16/solid'
 import { ArrowDownTrayIcon } from '@heroicons/react/16/solid'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import './Header.css'
 
 const Header = () => {
     const [scrollY, setScrollY] = useState(0);
+    const {t} = useTranslation()
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
+            // setScrollY(window.scrollY);
+            requestAnimationFrame(() => setScrollY(window.scrollY));
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -63,7 +66,7 @@ const Header = () => {
                      initial={{ opacity: 0, x: 50 }} 
                      animate={{ opacity: 1, x: 0 }} 
                      transition={{ duration: 1, ease: "easeOut", delay: 1 }} 
-                    >Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad.</motion.h2>
+                    >{t('header.subtitle')}</motion.h2>
                     <motion.div className="text-start md:text-end"
                     initial={{ opacity: 0, y: 100 }} 
                     animate={{ opacity: 1, y: 0 }} 
