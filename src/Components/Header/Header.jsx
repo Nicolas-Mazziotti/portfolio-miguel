@@ -85,7 +85,8 @@ const Header = () => {
                 <div
                     className="object-contain absolute bottom-0 left-1/2 -z-[1] bg-[url('/assets/header-image-wbg.png')] bg-cover bg-no-repeat bg-center w-[300px] h-[300px] md:w-[600px] md:h-[600px]"
                     style={{
-                        transform: `translate(-50%, ${scrollY * 0.7}px)`,
+                        transform: `translate3d(-50%, ${scrollY * 0.7}px, 0)`,
+                        willChange: 'transform',
                     }}
                 ></div>
 
@@ -93,7 +94,8 @@ const Header = () => {
                 {/* Segundo div con background */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -z-[2] bg-[url('/assets/header-image-background.png')] bg-cover bg-no-repeat bg-center opacity-[0.8] w-[500px] h-[400px] md:w-[900px] md:h-[700px]"
                     style={{
-                        transform: `translate(-50%, ${scrollY * 0.7}px)`,
+                        transform: `translate3d(-50%, ${scrollY * 0.7}px, 0)`,
+                        willChange: 'transform',
                     }}>
                 </div>
             </div>
