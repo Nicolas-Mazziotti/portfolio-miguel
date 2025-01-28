@@ -22,8 +22,8 @@ const Header = () => {
         };
     }, []);
     return (
-        <div className="p-5 h-[70vh] md:h-[75vh] ">
-            <div className='mt-5'>
+        <div className="p-5 h-[70vh] md:h-[75vh]" id='home'>
+            <div className='mt-12'>
                 <motion.h1 className='font-sans text-white text-5xl md:text-7xl text-start md:text-center'
                 initial={{ opacity: 0 }} 
                 animate={{ opacity: 1 }}  

@@ -7,7 +7,7 @@ const Portfolio = () => {
   const {t} = useTranslation()
   return (
     <>
-      <div className='bg-white p-5 pt-12 '>
+      <div className='bg-white p-5 pt-12 ' id='portfolio'>
         <motion.h2 className='text-start text-4xl sm:text-6xl'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

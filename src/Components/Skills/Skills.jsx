@@ -65,7 +65,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className="bg-white p-5 py-24 sm:py-32">
+        <div className="bg-white p-5 py-24 sm:py-32" id="skills">
             <motion.h2 className="text-start text-4xl sm:text-6xl"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
