@@ -36,9 +36,7 @@ const Portfolio = () => {
                             <ArrowRightCircleIcon className="h-5 w-5 text-lime-400 hover:text-white" />
                         </a>
                     </div>
-          </div>
-
-        
+          </div>        
       </div>
 
 
