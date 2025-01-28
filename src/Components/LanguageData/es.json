@@ -7,7 +7,7 @@
     "header.subtitle": "Estudiante de la tecnicatura en Desarrollo de Software y en formación en Ciberseguridad.",
     "header.list": "Ciberseguridad",
      "header.buttom": "Descargar CV",
-     "about-title": "SOBRE MI",
+     "about.title": "SOBRE MI",
     "about.resume": "Soy un estudiante enfocado en el desarrollo de software y la ciberseguridad. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad Argentina de la Empresa y he realizado cursos especializados en JavaScript, React y Ciberseguridad. También completé un programa de Ethical Hacking en la Universidad Tecnológica Nacional. Apasionado por la tecnología y el análisis de datos, busco aplicar y ampliar mis conocimientos en programación y tecnologías innovadoras. Mi objetivo es crecer profesionalmente participando en proyectos desafiantes, contribuyendo a equipos dinámicos y desarrollándome en entornos que fomenten la creatividad, la innovación y el aprendizaje continuo.",
     "about.button" : "Certificado",
     "about.modal" : "Cerrar",
