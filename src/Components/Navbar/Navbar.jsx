@@ -43,7 +43,7 @@ const Navbar = () => {
     <div className= {`flex justify-between p-5 bg-black fixed w-full z-40 ${scrolling ? 'bg-[#130f0fb8]': 'bg-black'}`}>
         <LanguageButtons/>
 
-        <div className="md:hidden z-10 mr-4">
+        <div className="md:hidden z-10">
         {menuOpen ? (
           <XMarkIcon className="w-6 h-6 cursor-pointer text-black-50 fixed left-[80%]" onClick={toggleMenu} />
         ) : (
