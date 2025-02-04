@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Spinner from '../Spinner/Spinner';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const Contact = () => {
@@ -18,14 +19,23 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
+    setFormData({ ...formData, [id]: value });    
   };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!captchaValue) {
+      alert('Por favor, completa el reCAPTCHA.');
+      return;
+    }
     setIsLoading(true)
     console.log(formData)
     const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -47,6 +57,7 @@ const Contact = () => {
           setSuccessMessageVisible(false);
       }, 5000);
         setFormData(initialFormData)
+        setCaptchaValue(null);
         
       })
       .catch((error) => {
@@ -126,6 +137,12 @@ const Contact = () => {
                   required
               ></textarea>
             </div>
+
+            {/* reCAPTCHA */}
+            <div className="mt-4">
+              <ReCAPTCHA sitekey={import.meta.env.VITE_RECAPTCHA_KEY} onChange={handleCaptchaChange} />
+            </div>
+
             {isLoading && <Spinner />}
             {successMessageVisible && (
                     <div className="text-green-500 font-bold mt-4">
