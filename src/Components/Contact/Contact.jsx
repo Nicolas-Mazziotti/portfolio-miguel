@@ -20,7 +20,6 @@ const Contact = () => {
   const [isSent, setIsSent] = useState(false);
   const [successMessageVisible, setSuccessMessageVisible] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
-
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });    
@@ -40,7 +39,7 @@ const Contact = () => {
     console.log(formData)
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;   
 
     emailjs
       .send(serviceId, templateId, {
